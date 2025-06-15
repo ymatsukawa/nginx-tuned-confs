@@ -30,12 +30,12 @@ The HTTPS handshake is processed by the CDN or Load Balancer, so nginx serves as
 
 ### nginx-json Configuration
 The JSON API system consists of two main components running in Docker:
-- **nginx** (port 8081): Reverse proxy with performance optimizations
+- **nginx** (port 8180): Reverse proxy with performance optimizations
 - **backend_server** (Go backend, port 8080): Simple JSON API server
 
 ### nginx-reactjs Configuration
 The React/Next.js system is configured for modern frontend applications:
-- **nginx** (port 8082): Reverse proxy optimized for static assets and frontend apps
+- **nginx** (port 8280): Reverse proxy optimized for static assets and frontend apps
 - **frontend_server** (port 3000): Frontend application server (React/Next.js)
 
 ### Configuration Structure
