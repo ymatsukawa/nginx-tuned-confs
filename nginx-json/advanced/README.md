@@ -4,70 +4,86 @@ This directory contains advanced nginx configurations for JSON API performance t
 
 ## client_buffers.conf
 
-`client_body_buffer_size`
+**`client_body_buffer_size`**
+
 Sets the buffer size for reading client request body.
 When a JSON payload fits in this buffer, nginx processes it in memory without writing to disk.
 For JSON APIs, set this larger than your typical request payload size to avoid disk I/O.
 
-`client_max_body_size`
+**`client_max_body_size`**
+
 Sets the maximum allowed size of the client request body (the entire JSON payload sent by the client).
 If a client sends a larger payload, nginx returns 413 (Request Entity Too Large) error.
 
-`client_header_buffer_size`
+**`client_header_buffer_size`**
+
 Sets the buffer size for reading client request headers (like Content-Type, Authorization, etc).
 Most JSON API headers fit in 1k, but increase if using large JWT tokens or custom headers.
 
-`large_client_header_buffers`
+**`large_client_header_buffers`**
+
 Sets the maximum number and size of buffers for large client request headers.
 Used when headers exceed client_header_buffer_size. Format: `number size`.
 
-`client_body_timeout`
+**`client_body_timeout`**
+
 Sets timeout for reading client request body between two successive read operations.
 If client doesn't send data within this time, nginx closes the connection with 408 error.
 
-`client_header_timeout`
+**`client_header_timeout`**
+
 Sets timeout for reading client request headers. If client doesn't send complete headers in time, connection closes.
 Helps protect against slowloris attacks where clients send headers very slowly.
 
-`send_timeout`
+**`send_timeout`**
+
 Sets timeout for sending a response to the client between two successive write operations.
 If client doesn't read data within this time (slow network/client), nginx closes connection.
 
 ## proxy_buffers.conf
 
-`proxy_buffering`
+**`proxy_buffering`**
+
 Enables or disables buffering of responses from the proxied server (your JSON API backend).
 When on, nginx reads the entire response before sending to client. When off, response is passed immediately.
 
-`proxy_buffer_size`
+**`proxy_buffer_size`**
+
 Sets the buffer size for reading the first part of the response from proxied server (usually headers).
 Must be large enough to fit response headers plus beginning of JSON response.
 
-`proxy_buffers`
+**`proxy_buffers`**
+
 Sets the number and size of buffers for reading response from proxied server. Format: `number size`.
 Total buffer space = number * size. This should accommodate your typical JSON response size.
 
-`proxy_busy_buffers_size`
+**`proxy_busy_buffers_size`**
+
 Sets the size of buffers that can be busy sending response to client while response is not fully read.
 Usually set to 2-3 times proxy_buffer_size to allow smooth data flow.
 
-`proxy_temp_file_write_size`
+**`proxy_temp_file_write_size`**
+
 Sets the size of data written to temporary file at a time when response doesn't fit in buffers.
 Larger values reduce disk I/O operations but use more memory during writes.
 
-`proxy_max_temp_file_size`
+**`proxy_max_temp_file_size`**
+
 Sets maximum size of temporary file for storing large responses that don't fit in buffers.
 When exceeded, nginx returns error to client. Set to 0 to disable temporary files.
 
-`proxy_connect_timeout`
+**`proxy_connect_timeout`**
+
 Sets timeout for establishing connection to proxied server (your backend API).
 Keep this low to quickly detect backend issues and try next upstream server.
 
-`proxy_send_timeout`
+**`proxy_send_timeout`**
+
 Sets timeout for sending a request to the proxied server between two write operations.
 If backend doesn't accept data in time, nginx closes connection and may try next server.
 
-`proxy_read_timeout`
+**`proxy_read_timeout`**
+
 Sets timeout for reading response from proxied server between two read operations.
 Critical for JSON APIs - set based on your slowest expected API endpoint response time.
 

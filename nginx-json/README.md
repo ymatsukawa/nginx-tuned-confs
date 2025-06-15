@@ -137,7 +137,7 @@ Backend server pool configuration for connection management.
 
 Defines the backend API server pool with connection pooling optimizations.
 
-**`server tserver:8080`**
+**`server backserver:8080`**
 
 Specifies the backend server address (using Docker network name).
 

@@ -2,8 +2,8 @@
 .dockerignore
 
 # Go binaries and build artifacts
-test_server/main
-test_server/test_server
+backend_server/main
+backend_server/backend_server
 *.exe
 *.exe~
 *.dll

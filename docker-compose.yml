@@ -1,9 +1,9 @@
 version: '3.8'
 
 services:
-  nginx:
+  nginx-backend:
     image: nginx:1.27.5
-    container_name: nginx-server
+    container_name: nginx-server-back
     ports:
       - "8180:80"
     volumes:
@@ -11,10 +11,23 @@ services:
       - ./nginx-json:/etc/nginx/conf.d/custom:ro
       - ./json:/var/www/json:ro
     restart: unless-stopped
-  test-server:
-    container_name: tserver
+    depends_on:
+      - test-backserver
+  nginx-frontend:
+    image: nginx:1.27.5
+    container_name: nginx-server-front
+    ports:
+      - "8280:80"
+    volumes:
+      - ./nginx-reactjs.conf:/etc/nginx/nginx.conf:ro
+      - ./nginx-reactjs:/etc/nginx/conf.d/custom:ro
+    restart: unless-stopped
+    depends_on:
+      - test-frontserver
+  test-backserver:
+    container_name: backserver
     build:
-      context: ./test_server
+      context: ./backend_server
       dockerfile: ./Dockerfile
     command: sh -c "./main"
     volumes:
@@ -24,3 +37,14 @@ services:
     environment:
       - NOPE=fake
       # - DEBUG=true
+  test-frontserver:
+    container_name: frontserver
+    build:
+      context: ./frontend_server
+      dockerfile: ./Dockerfile
+    command: sh -c "npm run start"
+    volumes:
+      - ./frontend_server:/app
+      - ./frontend_server/node_modules:/app/node_modules
+    ports:
+      - "3000:3000"
