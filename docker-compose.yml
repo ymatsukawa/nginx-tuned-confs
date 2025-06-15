@@ -1,0 +1,26 @@
+version: '3.8'
+
+services:
+  nginx:
+    image: nginx:1.27.5
+    container_name: nginx-server
+    ports:
+      - "8180:80"
+    volumes:
+      - ./nginx-json.conf:/etc/nginx/nginx.conf:ro
+      - ./nginx-json:/etc/nginx/conf.d/custom:ro
+      - ./json:/var/www/json:ro
+    restart: unless-stopped
+  test-server:
+    container_name: tserver
+    build:
+      context: ./test_server
+      dockerfile: ./Dockerfile
+    command: sh -c "./main"
+    volumes:
+      - ./json:/app/json:ro
+    ports:
+      - "8080:8080"
+    environment:
+      - NOPE=fake
+      # - DEBUG=true

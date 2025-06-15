@@ -1,0 +1,75 @@
+# Docker
+.dockerignore
+
+# Go binaries and build artifacts
+test_server/main
+test_server/test_server
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.test
+*.out
+go.work
+
+# Go vendor directory
+vendor/
+
+# Nginx logs and runtime files
+access.log
+error.log
+nginx.pid
+*.pid
+
+# Generated test images
+html/images/
+*.jpg
+*.jpeg
+*.png
+*.gif
+*.bmp
+*.webp
+*.svg
+
+# Logs
+*.log
+logs/
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Temporary files
+*.tmp
+*.temp
+temp/
+tmp/
+
+# Node modules (if any)
+node_modules/
+
+# Environment files
+.env
+.env.local
+.env.production
+
+# Build outputs
+dist/
+build/
+
+# Test data backups
+*.bak
+*.backup

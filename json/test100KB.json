@@ -1,0 +1,389 @@
+{
+  "metadata": {
+    "version": "1.0",
+    "generated_at": "2025-06-12T00:00:00Z",
+    "purpose": "nginx performance testing",
+    "size_target": "100KB",
+    "description": "This JSON file contains structured test data for evaluating nginx server performance and configuration optimization"
+  },
+  "users": [
+    {
+      "id": 1,
+      "username": "john_doe_2025",
+      "email": "john.doe@example.com",
+      "profile": {
+        "first_name": "John",
+        "last_name": "Doe",
+        "age": 28,
+        "location": {
+          "country": "United States",
+          "state": "California",
+          "city": "San Francisco",
+          "zip_code": "94102",
+          "coordinates": {
+            "latitude": 37.7749,
+            "longitude": -122.4194
+          }
+        },
+        "preferences": {
+          "theme": "dark",
+          "language": "en-US",
+          "notifications": {
+            "email": true,
+            "push": false,
+            "sms": true
+          },
+          "privacy": {
+            "profile_visibility": "public",
+            "data_sharing": false,
+            "analytics": true
+          }
+        }
+      },
+      "activity": {
+        "last_login": "2025-06-11T23:45:30Z",
+        "login_count": 1247,
+        "created_at": "2023-01-15T10:30:00Z",
+        "status": "active",
+        "subscription": {
+          "plan": "premium",
+          "expires_at": "2025-12-31T23:59:59Z",
+          "auto_renew": true
+        }
+      },
+      "posts": [
+        {
+          "id": 101,
+          "title": "Understanding Modern Web Architecture",
+          "content": "In today's rapidly evolving technological landscape, web architecture has become increasingly complex and sophisticated. Modern applications require robust, scalable, and maintainable solutions that can handle millions of concurrent users while providing exceptional performance and reliability.",
+          "tags": [
+            "technology",
+            "web",
+            "architecture",
+            "scalability"
+          ],
+          "created_at": "2025-06-10T14:30:00Z",
+          "likes": 156,
+          "comments": 23,
+          "shares": 45
+        },
+        {
+          "id": 102,
+          "title": "Best Practices for API Design",
+          "content": "Designing effective APIs requires careful consideration of multiple factors including performance, security, versioning, and developer experience. A well-designed API serves as the foundation for successful application integration and long-term maintainability.",
+          "tags": [
+            "api",
+            "design",
+            "best-practices",
+            "development"
+          ],
+          "created_at": "2025-06-08T09:15:00Z",
+          "likes": 89,
+          "comments": 12,
+          "shares": 28
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "username": "jane_smith_dev",
+      "email": "jane.smith@example.com",
+      "profile": {
+        "first_name": "Jane",
+        "last_name": "Smith",
+        "age": 32,
+        "location": {
+          "country": "Canada",
+          "state": "Ontario",
+          "city": "Toronto",
+          "zip_code": "M5V 3A8",
+          "coordinates": {
+            "latitude": 43.6532,
+            "longitude": -79.3832
+          }
+        },
+        "preferences": {
+          "theme": "light",
+          "language": "en-CA",
+          "notifications": {
+            "email": true,
+            "push": true,
+            "sms": false
+          },
+          "privacy": {
+            "profile_visibility": "friends_only",
+            "data_sharing": true,
+            "analytics": false
+          }
+        }
+      },
+      "activity": {
+        "last_login": "2025-06-12T08:22:15Z",
+        "login_count": 892,
+        "created_at": "2023-03-22T16:45:00Z",
+        "status": "active",
+        "subscription": {
+          "plan": "basic",
+          "expires_at": "2025-09-15T23:59:59Z",
+          "auto_renew": false
+        }
+      },
+      "posts": [
+        {
+          "id": 201,
+          "title": "Machine Learning in Production",
+          "content": "Deploying machine learning models in production environments presents unique challenges that require specialized tools, techniques, and methodologies. Success depends on proper model versioning, monitoring, and continuous integration practices.",
+          "tags": [
+            "machine-learning",
+            "production",
+            "deployment",
+            "devops"
+          ],
+          "created_at": "2025-06-09T11:20:00Z",
+          "likes": 234,
+          "comments": 45,
+          "shares": 67
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "username": "alex_johnson_2025",
+      "email": "alex.johnson@example.com",
+      "profile": {
+        "first_name": "Alex",
+        "last_name": "Johnson",
+        "age": 26,
+        "location": {
+          "country": "United Kingdom",
+          "state": "England",
+          "city": "London",
+          "zip_code": "SW1A 1AA",
+          "coordinates": {
+            "latitude": 51.5074,
+            "longitude": -0.1278
+          }
+        },
+        "preferences": {
+          "theme": "auto",
+          "language": "en-GB",
+          "notifications": {
+            "email": false,
+            "push": true,
+            "sms": true
+          },
+          "privacy": {
+            "profile_visibility": "public",
+            "data_sharing": true,
+            "analytics": true
+          }
+        }
+      },
+      "activity": {
+        "last_login": "2025-06-11T19:33:42Z",
+        "login_count": 567,
+        "created_at": "2023-07-08T12:15:00Z",
+        "status": "active",
+        "subscription": {
+          "plan": "enterprise",
+          "expires_at": "2026-07-08T23:59:59Z",
+          "auto_renew": true
+        }
+      },
+      "posts": [
+        {
+          "id": 301,
+          "title": "Cloud Infrastructure Optimization",
+          "content": "Optimizing cloud infrastructure requires a deep understanding of resource allocation, cost management, and performance monitoring. Modern cloud platforms offer sophisticated tools for automation and scaling that can significantly reduce operational overhead.",
+          "tags": [
+            "cloud",
+            "infrastructure",
+            "optimization",
+            "cost-management"
+          ],
+          "created_at": "2025-06-07T13:45:00Z",
+          "likes": 178,
+          "comments": 34,
+          "shares": 52
+        },
+        {
+          "id": 302,
+          "title": "Microservices Architecture Patterns",
+          "content": "Microservices architecture has revolutionized how we build and deploy large-scale applications. Understanding key patterns such as service discovery, circuit breakers, and event sourcing is essential for successful implementation.",
+          "tags": [
+            "microservices",
+            "architecture",
+            "patterns",
+            "scalability"
+          ],
+          "created_at": "2025-06-05T10:20:00Z",
+          "likes": 145,
+          "comments": 28,
+          "shares": 41
+        }
+      ]
+    }
+  ],
+  "products": [
+    {
+      "id": "prod_001",
+      "name": "Professional Development Platform",
+      "description": "A comprehensive platform designed to accelerate professional growth through personalized learning paths, skill assessments, and industry-recognized certifications",
+      "category": "Education Technology",
+      "price": {
+        "currency": "USD",
+        "amount": 299.99,
+        "billing_cycle": "monthly"
+      },
+      "features": [
+        {
+          "name": "Personalized Learning Paths",
+          "description": "AI-powered recommendation engine that creates customized learning journeys based on individual goals and current skill levels"
+        },
+        {
+          "name": "Interactive Coding Challenges",
+          "description": "Hands-on programming exercises with real-time feedback and automated testing to reinforce learning concepts"
+        },
+        {
+          "name": "Industry Mentorship Program",
+          "description": "Connect with experienced professionals for guidance, career advice, and networking opportunities"
+        },
+        {
+          "name": "Certification Tracking",
+          "description": "Monitor progress toward industry-recognized certifications with detailed analytics and milestone tracking"
+        }
+      ],
+      "reviews": [
+        {
+          "user_id": 1,
+          "rating": 5,
+          "comment": "Exceptional platform that has significantly accelerated my career development. The personalized approach makes all the difference.",
+          "created_at": "2025-06-01T14:30:00Z"
+        },
+        {
+          "user_id": 2,
+          "rating": 4,
+          "comment": "Great content and structure. The mentorship program is particularly valuable for career growth.",
+          "created_at": "2025-05-28T09:45:00Z"
+        }
+      ]
+    },
+    {
+      "id": "prod_002",
+      "name": "Enterprise Analytics Suite",
+      "description": "Advanced analytics platform providing comprehensive business intelligence, predictive modeling, and real-time dashboard capabilities for enterprise organizations",
+      "category": "Business Intelligence",
+      "price": {
+        "currency": "USD",
+        "amount": 1299.99,
+        "billing_cycle": "monthly"
+      },
+      "features": [
+        {
+          "name": "Real-time Data Processing",
+          "description": "Process and analyze streaming data with sub-second latency for immediate business insights"
+        },
+        {
+          "name": "Predictive Analytics Engine",
+          "description": "Machine learning algorithms that forecast trends and identify potential opportunities or risks"
+        },
+        {
+          "name": "Custom Dashboard Builder",
+          "description": "Drag-and-drop interface for creating personalized dashboards with interactive visualizations"
+        },
+        {
+          "name": "API Integration Hub",
+          "description": "Seamlessly connect with existing business systems and third-party data sources"
+        }
+      ],
+      "reviews": [
+        {
+          "user_id": 3,
+          "rating": 5,
+          "comment": "Powerful analytics capabilities that have transformed our decision-making process. Highly recommended for enterprise use.",
+          "created_at": "2025-06-03T16:20:00Z"
+        }
+      ]
+    }
+  ],
+  "analytics": {
+    "performance_metrics": {
+      "response_time_ms": 145,
+      "throughput_requests_per_second": 2850,
+      "error_rate_percentage": 0.02,
+      "uptime_percentage": 99.98,
+      "memory_usage_mb": 1024,
+      "cpu_utilization_percentage": 45
+    },
+    "user_engagement": {
+      "daily_active_users": 15420,
+      "monthly_active_users": 156789,
+      "average_session_duration_minutes": 23.5,
+      "bounce_rate_percentage": 12.3,
+      "conversion_rate_percentage": 3.8
+    },
+    "geographical_distribution": [
+      {
+        "country": "United States",
+        "users": 45623,
+        "percentage": 35.2
+      },
+      {
+        "country": "Canada",
+        "users": 12456,
+        "percentage": 9.6
+      },
+      {
+        "country": "United Kingdom",
+        "users": 23789,
+        "percentage": 18.3
+      },
+      {
+        "country": "Germany",
+        "users": 18234,
+        "percentage": 14.1
+      },
+      {
+        "country": "France",
+        "users": 14567,
+        "percentage": 11.2
+      },
+      {
+        "country": "Australia",
+        "users": 9876,
+        "percentage": 7.6
+      },
+      {
+        "country": "Japan",
+        "users": 5432,
+        "percentage": 4.2
+      }
+    ]
+  },
+  "configuration": {
+    "server_settings": {
+      "max_connections": 1000,
+      "timeout_seconds": 30,
+      "keep_alive": true,
+      "compression_enabled": true,
+      "ssl_enabled": true,
+      "rate_limiting": {
+        "enabled": true,
+        "requests_per_minute": 60,
+        "burst_size": 10
+      }
+    },
+    "cache_settings": {
+      "enabled": true,
+      "ttl_seconds": 3600,
+      "max_size_mb": 512,
+      "compression_ratio": 0.75
+    },
+    "logging": {
+      "level": "info",
+      "format": "json",
+      "rotation": "daily",
+      "retention_days": 30
+    }
+  }
+}
